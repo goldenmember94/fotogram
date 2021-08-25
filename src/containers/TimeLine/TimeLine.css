@@ -9,5 +9,10 @@
 }
 
 @media (min-width: 1200px) { 
-
+  .TimeLine__wrapper {
+    flex-direction: row;
+    width: 975px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
 } 

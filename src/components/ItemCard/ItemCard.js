@@ -16,6 +16,9 @@ function ItemCard(props) {
     setLike(!like)
   }
 
+  // const idPost = props.idPost
+  // const idUser = props.idUser
+
 
   return (
     <div className="ItemCard__wrapper">
@@ -24,7 +27,7 @@ function ItemCard(props) {
         <div onClick={changelike} className="ItemCard__like-img">
           <img width="20px" height="20px" src={like ? likeImg : likeBorderImg} alt="#" />
         </div>
-        <div className="ItemCard__description">на расслабоне на чиле...</div>
+        <div className="ItemCard__description">{props.description}</div>
       </div>
     </div>
   )

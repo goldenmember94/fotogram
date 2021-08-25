@@ -1,9 +1,15 @@
 import './TimeLine.css'
 
+import ItemCard from '../../components/ItemCard/ItemCard'
+
 function TimeLine(props) {
 
   return (
-    <div>TimeLine</div>
+    <div className="TimeLine__wrapper">
+      <ItemCard/>
+      <ItemCard/>
+      <ItemCard/>
+    </div>
   )
 } 
 

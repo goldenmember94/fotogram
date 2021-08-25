@@ -1,0 +1,33 @@
+
+.ItemCard__wrapper {
+  width: 280px;
+  height: 320px;
+  border: 1px solid gray;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.ItemCard__img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+}
+
+.ItemCard__wrapper-description {
+  display: flex;
+  height: 30px;
+}
+
+.ItemCard__like-img {
+  width: 20px;
+  height: 20px;
+  border: 1px;
+  margin: 0 10px;
+}
+
+.ItemCard__like-img:hover {
+  cursor: pointer;
+}

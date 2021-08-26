@@ -2,7 +2,7 @@ import './App.css'
 // import React, {useState, useEffect} from 'react'
 
 //состояние объекта в localStorage
-import {st} from './state/st'
+// import {st} from './state/st'
 
 import MainPage from "./page/MainPage/MainPage";
 

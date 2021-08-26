@@ -4,21 +4,19 @@ import likeBorderImg from '../Navigation/image/like-border.png'
 
 import React, {useState} from 'react'
 
-
-
 import image from '../../общая/image/239881589_269128554724251_4491823688589993348_n.jpg'
 
 
 function ItemCard(props) {
 
   const [like, setLike] = useState(false)
+
   function changelike(props) {
     setLike(!like)
   }
 
   // const idPost = props.idPost
   // const idUser = props.idUser
-
 
   return (
     <div className="ItemCard__wrapper">

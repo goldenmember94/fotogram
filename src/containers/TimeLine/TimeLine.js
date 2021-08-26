@@ -1,38 +1,29 @@
 import './TimeLine.css'
 import React, {useState, useEffect} from 'react'
 
-// import {st} from '../../state/st'
-
 import ItemCard from '../../components/ItemCard/ItemCard'
 
 function TimeLine(props) {
-  const [stateLoad, setStateLoad] = useState(false)
-  const [postState, setPostState] = useState([])
+  const [postState, setPostState] = useState(false)
 
   useEffect(() => {
-
-    if (stateLoad === false) {
+    if (!postState) {
       setPostState(JSON.parse(localStorage.getItem('postState')))
-      setStateLoad(true)
-
-      console.log("TimeLine", postState, stateLoad);
     }
-  
-  }, [postState, stateLoad]) 
-  
 
-  const itemsCards = postState.map((i) => 
-    <ItemCard 
-      key={i.idPost} 
-      idPost={i.idPost}
-      idUser={i.idUser}
-      description={i.description}
-    />
-  )
-
+    console.log("TimeLine", postState);
+  }, [postState]) 
+  
   return (
     <div className="TimeLine__wrapper">
-      {stateLoad ? itemsCards : <div>Ошибка!!!</div> } 
+      {postState ? postState.map((i) => 
+        <ItemCard 
+          key={i.idPost} 
+          idPost={i.idPost}
+          idUser={i.idUser}
+          description={i.description}
+        />
+      ) : <div>Ошибка!!!</div> } 
     </div>
   )
 

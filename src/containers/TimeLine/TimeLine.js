@@ -1,6 +1,6 @@
 import './TimeLine.css'
 import React, {useState, useEffect} from 'react'
-
+import {firstStatePostsLink} from '../../links'
 import ItemCard from '../../components/ItemCard/ItemCard'
 
 function TimeLine(props) {
@@ -9,9 +9,11 @@ function TimeLine(props) {
   useEffect(() => {
 
     if (!postState) {
-      fetch('https://api.npoint.io/ad11a9dbb73d4cddad06')
+      fetch(firstStatePostsLink)
       .then(response => response.json())
       .then(json => setPostState(json))
+
+      
     }
     
   }) 
@@ -24,8 +26,9 @@ function TimeLine(props) {
           idPost={i.idPost}
           idUser={i.idUser}
           description={i.description}
-        />
-      ) : <div>Загрузка</div> } 
+          linkFoto={i.linkFoto}
+        /> 
+      ) : <div className="TimeLine__wrapper" >идет агрузка...</div>}
     </div>
   )
 

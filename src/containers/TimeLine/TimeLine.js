@@ -7,12 +7,14 @@ function TimeLine(props) {
   const [postState, setPostState] = useState(false)
 
   useEffect(() => {
-    if (!postState) {
-      setPostState(JSON.parse(localStorage.getItem('postState')))
-    }
 
-    console.log("TimeLine", postState);
-  }, [postState]) 
+    if (!postState) {
+      fetch('https://api.npoint.io/ad11a9dbb73d4cddad06')
+      .then(response => response.json())
+      .then(json => setPostState(json))
+    }
+    
+  }) 
   
   return (
     <div className="TimeLine__wrapper">
@@ -23,7 +25,7 @@ function TimeLine(props) {
           idUser={i.idUser}
           description={i.description}
         />
-      ) : <div>Ошибка!!!</div> } 
+      ) : <div>Загрузка</div> } 
     </div>
   )
 

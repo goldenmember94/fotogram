@@ -13,6 +13,7 @@
     flex-direction: row;
     width: 975px;
     margin: auto;
+    margin-top: 35px;
     flex-wrap: wrap;
   }
 } 

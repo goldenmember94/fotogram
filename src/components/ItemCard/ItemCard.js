@@ -26,7 +26,7 @@ function ItemCard(props) {
     setLike(!like)
 
     if (!localStorage.getItem(props.idUser)) {
-      const i = [{idUser: props.idUser}, {idPost: props.idPost, like: true}]
+      const i = [{idUser: props.idUser}, {idPost: props.idPost, like: true, description: props.description, linkFoto: props.linkFoto}]
       localStorage.setItem(props.idUser, JSON.stringify(i))
     } else {
       const likeData = JSON.parse(localStorage.getItem(props.idUser))
@@ -39,12 +39,12 @@ function ItemCard(props) {
         } else {
           likeData.splice(index, 1)
           localStorage.setItem(props.idUser, JSON.stringify(likeData))
-          console.log(index);
+          // console.log(index);
         }
 
         
       } else {
-        likeData.push({idPost: props.idPost, like: true})
+        likeData.push({idPost: props.idPost, like: true, description: props.description, linkFoto: props.linkFoto})
 
         localStorage.setItem(props.idUser, JSON.stringify(likeData))
       }

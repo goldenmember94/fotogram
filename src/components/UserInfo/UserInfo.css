@@ -34,7 +34,7 @@
   .UserInfo__wrapper {
     width: 975px;
     flex-direction: row;
-    margin: 35px auto;
+    margin: 35px auto 0
   }
 
   .UserInfo__avatar {

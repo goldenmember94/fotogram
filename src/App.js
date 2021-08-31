@@ -1,27 +1,37 @@
 import './App.css'
-// import React, {useState, useEffect} from 'react'
 
-//состояние объекта в localStorage
-// import {st} from './state/st'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 import MainPage from "./page/MainPage/MainPage";
+import Navigation from './components/Navigation/Navigation';
+import LikePostPage from './page/TimeLinePage/LikePostPage';
 
 function App() {
 
-  // const [postState, setPostState] = useState('')
-
-  // useEffect(() => {
-    // загрузка состояния объекта в localStorage
-    // localStorage.setItem('postState', JSON.stringify(st))
-    
-    // setPostState(localStorage.getItem('postState'))
-
-  // }, [postState]) 
-
   return (
-    <div className="App">
-      <MainPage/>
-    </div>
+    <Router>
+      <div className="App">
+
+        <Navigation/>
+
+        <Switch>
+
+          <Route path="/mainpage">
+            <MainPage/>
+          </Route>
+
+          <Route path="/likepost">
+            <LikePostPage/>
+          </Route>
+          
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 

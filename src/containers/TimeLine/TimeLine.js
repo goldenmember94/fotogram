@@ -34,6 +34,18 @@ function TimeLine(props) {
             ) : <div className="TimeLine__wrapper" >идет загрузка...</div>}
           </Route>
 
+          <Route path="/likepost">
+            {props.localPostState ? props.localPostState[1].map((i) => 
+              <ItemCard 
+                key={i.idPost} 
+                idPost={i.idPost}
+                idUser={i.idUser}
+                description={i.description}
+                linkFoto={i.linkFoto}
+              /> 
+            ) : <div className="TimeLine__wrapper" >идет загрузка...</div>}
+          </Route>
+
     </div>
   )
 

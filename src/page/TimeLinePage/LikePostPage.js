@@ -14,7 +14,6 @@ function LikePostPage(props) {
       .then(response => response.json())
       .then(json => setUserInfo(json))
     }
-    // console.log(userInfo);
   })
 
   useEffect(() => {
@@ -28,7 +27,7 @@ function LikePostPage(props) {
     <div className="LikePostPage__wrapper">
       {localPostState 
         ? <TimeLine localPostState={JSON.parse(localPostState)} />
-        : <div> идет загрузка...</div> }
+        : <div className="TimeLine__wrapper"> идет загрузка...</div> }
     </div>
   )
 }

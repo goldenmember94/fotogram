@@ -1,11 +1,11 @@
 
-.MainPage__wrapper {
+.LikePostPage__wrapper {
   width: 330px;
   margin: auto;
 }
 
 @media (min-width: 1200px) { 
-  .MainPage__wrapper {
+  .LikePostPage__wrapper {
     width: 1100px;
   }
 } 

@@ -9,6 +9,7 @@ import {
 import MainPage from "./page/MainPage/MainPage";
 import Navigation from './components/Navigation/Navigation';
 import LikePostPage from './page/TimeLinePage/LikePostPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
 
@@ -29,6 +30,8 @@ function App() {
           </Route>
           
         </Switch>
+
+        <Footer/>
 
       </div>
     </Router>

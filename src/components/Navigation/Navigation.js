@@ -12,7 +12,7 @@ function Navigation(props) {
       <a className="Navigation__logo" href="/">FOTOGRAM</a>
 
       <div className="Navigation__button-wrapper">
-        <Link className="Navigation__button" to="/"><img width="40px" height="40px" src={list} alt="" /></Link>
+        <Link className="Navigation__button" to="/AccountsPage"><img width="40px" height="40px" src={list} alt="" /></Link>
         <Link className="Navigation__button" to="/likepost"><img width="40px" height="40px" src={likeBorder} alt="" /></Link>
         <Link className="Navigation__button" to="/mainpage"><img width="40px" height="40px" src={account} alt="" /></Link>
       </div>

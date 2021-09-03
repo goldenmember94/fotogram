@@ -10,6 +10,7 @@ import MainPage from "./page/MainPage/MainPage";
 import Navigation from './components/Navigation/Navigation';
 import LikePostPage from './page/TimeLinePage/LikePostPage';
 import Footer from './components/Footer/Footer';
+import AccountsPage from './page/AccountsPage/AccountsPage';
 
 function App() {
 
@@ -27,6 +28,10 @@ function App() {
 
           <Route path="/likepost">
             <LikePostPage/>
+          </Route>
+
+          <Route path="/AccountsPage">
+            <AccountsPage/>
           </Route>
           
         </Switch>
